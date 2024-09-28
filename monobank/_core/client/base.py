@@ -4,8 +4,15 @@ import json
 
 
 class BaseAPIClient:
-    def __init__(self, base_url):
+    def __init__(self, base_url, response_serializer=BaseAPIClient.get_json):
+        """
+        Base API client
+
+        :param base_url: request base url to API
+        :param response_serializer: method that accepts urllib.response
+        """
         self.base_url = base_url
+        self._response_serializer = response_serializer
         self._headers = {'Content-Type': 'application/json'}  # Default header
 
     @property
@@ -34,7 +41,7 @@ class BaseAPIClient:
             req.add_header(key, value)
 
         with request.urlopen(req) as response:
-            return response
+            return self._response_serializer(response)
 
     def get(self, path, params=None, data=None):
         return self._request('GET', path, params=params, data=data)
@@ -47,3 +54,13 @@ class BaseAPIClient:
 
     def delete(self, path, params=None, data=None):
         return self._request('DELETE', path, params=params, data=data)
+
+    @staticmethod
+    def get_json(response):
+        """
+        Get json from response
+
+        :param response: urllib.response
+        :return: JSON to PON (Python Object Notation)
+        """
+        return json.loads(response.read().decode('utf-8'))

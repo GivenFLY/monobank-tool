@@ -3,7 +3,7 @@ from monobank._core.client.acquiring import AcquiringAPIClient
 
 
 class AcquiringAPI:
-    def __init__(self, api_key):
-        self.api_key = api_key
-        self.client = AcquiringAPIClient(token=self.api_key)
-        self.merchant = MerchantFacade(client=self.client)
+    def __init__(self, api_key, response_serializer=AcquiringAPI.get_json):
+        self._api_key = api_key
+        self._client = AcquiringAPIClient(token=self._api_key, response_serializer=response_serializer)
+        self.merchant = MerchantFacade(client=self._client)
