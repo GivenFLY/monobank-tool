@@ -1,4 +1,4 @@
-from monobank.core.client.base import BaseAPIClient
+from monobank._core.client.base import BaseAPIClient
 
 
 class AcquiringAPIClient(BaseAPIClient):

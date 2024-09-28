@@ -1,4 +1,7 @@
-from monobank.core.client.acquiring import AcquiringAPIClient
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from monobank._core.client.acquiring import AcquiringAPIClient
 
 
 class SubmerchantFacade:

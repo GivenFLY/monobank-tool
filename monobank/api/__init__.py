@@ -1,5 +1,5 @@
-from monobank.api.acquiring.merchant import MerchantFacade
-from monobank.core.client.acquiring import AcquiringAPIClient
+from monobank.api._acquiring._merchant import MerchantFacade
+from monobank._core.client.acquiring import AcquiringAPIClient
 
 
 class AcquiringAPI:
