@@ -1,9 +1,9 @@
 [tool.poetry]
 name = "monobank-tool"
-version = "0.1.0"
 description = "Pure Python API wrapper for Monobank"
 readme = "README.md"
 license = "MIT"
+
 authors = [
     "Oleksii Moshura"
 ]
@@ -32,3 +32,8 @@ python = ">=3.8"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[project.urls]
+"Homepage" = "https://github.com/GivenFLY/monobank-tool"
+"Bug Tracker" = "https://github.com/GivenFLY/monobank-tool/issues"
+"Source Code" = "https://github.com/GivenFLY/monobank-tool"
