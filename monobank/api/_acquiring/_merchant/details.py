@@ -12,6 +12,6 @@ class DetailsFacade:
         """
         Дані мерчанта
 
-        :return: urllib.response
+        :return: Serialized response (default get_json)
         """
         return self.client.get("merchant/details", params=params, data=data)

@@ -14,7 +14,7 @@ class InvoiceFacade:
 
         :param params: параметри запиту
         :param data: дані запиту
-        :return: urllib.response
+        :return: Serialized response (default get_json)
         """
         return self.client.post("merchant/invoice/create", params=params, data=data)
 
@@ -25,7 +25,7 @@ class InvoiceFacade:
 
         :param params: параметри запиту
         :param data: дані запиту
-        :return: urllib.response
+        :return: Serialized response (default get_json)
         """
         return self.client.get("merchant/invoice/status", params=params, data=data)
 
@@ -35,7 +35,7 @@ class InvoiceFacade:
 
         :param params: параметри запиту
         :param data: дані запиту
-        :return: urllib.response
+        :return: Serialized response (default get_json)
         """
         return self.client.post("merchant/invoice/cancel", params=params, data=data)
 
@@ -45,7 +45,7 @@ class InvoiceFacade:
 
         :param params: параметри запиту
         :param data: дані запиту
-        :return: urllib.response
+        :return: Serialized response (default get_json)
         """
         return self.client.post("merchant/invoice/remove", params=params, data=data)
 
@@ -55,7 +55,7 @@ class InvoiceFacade:
 
         :param params: параметри запиту
         :param data: дані запиту
-        :return: urllib.response
+        :return: Serialized response (default get_json)
         """
         return self.client.get("merchant/invoice/payment-info", params=params, data=data)
 
@@ -65,7 +65,7 @@ class InvoiceFacade:
 
         :param params: параметри запиту
         :param data: дані запиту
-        :return: urllib.response
+        :return: Serialized response (default get_json)
         """
         return self.client.post("merchant/invoice/finalize", params=params, data=data)
 
@@ -76,7 +76,7 @@ class InvoiceFacade:
 
         :param params: параметри запиту
         :param data: дані запиту
-        :return: urllib.response
+        :return: Serialized response (default get_json)
         """
         return self.client.post("merchant/invoice/payment-direction", params=params, data=data)
 
@@ -86,6 +86,6 @@ class InvoiceFacade:
 
         :param params: параметри запиту
         :param data: дані запиту
-        :return: urllib.response
+        :return: Serialized response (default get_json)
         """
         return self.client.get("merchant/invoice/fiscal-checks", params=params, data=data)

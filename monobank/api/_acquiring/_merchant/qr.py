@@ -14,7 +14,7 @@ class QRFacade:
 
         :param params: параметри запиту
         :param data: дані запиту
-        :return: urllib.response
+        :return: Serialized response (default get_json)
         """
         return self.client.get("merchant/qr/details", params=params, data=data)
 
@@ -24,7 +24,7 @@ class QRFacade:
 
         :param params: параметри запиту
         :param data: дані запиту
-        :return: urllib.response
+        :return: Serialized response (default get_json)
         """
         return self.client.post("merchant/qr/reset-amount", params=params, data=data)
 
@@ -34,6 +34,6 @@ class QRFacade:
 
         :param params: параметри запиту
         :param data: дані запиту
-        :return: urllib.response
+        :return: Serialized response (default get_json)
         """
         return self.client.get("merchant/qr/list", params=params, data=data)

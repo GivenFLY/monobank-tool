@@ -14,7 +14,7 @@ class WalletFacade:
 
         :param params: параметри запиту
         :param data: дані запиту
-        :return: urllib.response
+        :return: Serialized response (default get_json)
         """
         return self.client.delete("merchant/wallet/card", params=params, data=data)
 
@@ -24,7 +24,7 @@ class WalletFacade:
 
         :param params: параметри запиту
         :param data: дані запиту
-        :return: urllib.response
+        :return: Serialized response (default get_json)
         """
         return self.client.post("merchant/wallet/payment", params=params, data=data)
 
@@ -34,6 +34,6 @@ class WalletFacade:
 
         :param params: параметри запиту
         :param data: дані запиту
-        :return: urllib.response
+        :return: Serialized response (default get_json)
         """
         return self.client.get("merchant/wallet", params=params, data=data)

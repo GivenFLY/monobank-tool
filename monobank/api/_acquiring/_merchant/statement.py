@@ -14,6 +14,6 @@ class StatementFacade:
 
         :param params: параметри запиту
         :param data: дані запиту
-        :return: urllib.response
+        :return: Serialized response (default get_json)
         """
         return self.client.get("merchant/statement", params=params, data=data)
