@@ -5,7 +5,7 @@ if TYPE_CHECKING:
 
 
 class QRFacade:
-    def __init__(self, client: AcquiringAPIClient):
+    def __init__(self, client: "AcquiringAPIClient"):
         self.client = client
 
     def details(self, params=None, data=None):

@@ -5,7 +5,7 @@ if TYPE_CHECKING:
 
 
 class StatementFacade:
-    def __init__(self, client: AcquiringAPIClient):
+    def __init__(self, client: "AcquiringAPIClient"):
         self.client = client
 
     def __call__(self, params=None, data=None):

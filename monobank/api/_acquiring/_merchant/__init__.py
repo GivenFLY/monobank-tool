@@ -12,7 +12,7 @@ from monobank.api._acquiring._merchant.wallet import WalletFacade
 
 
 class MerchantFacade:
-    def __init__(self, client: AcquiringAPIClient):
+    def __init__(self, client: "AcquiringAPIClient"):
         self.client = client
         self.invoice = InvoiceFacade(client=client)
         self.details = DetailsFacade(client=client)

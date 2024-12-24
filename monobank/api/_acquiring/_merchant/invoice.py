@@ -5,7 +5,7 @@ if TYPE_CHECKING:
 
 
 class InvoiceFacade:
-    def __init__(self, client: AcquiringAPIClient):
+    def __init__(self, client: "AcquiringAPIClient"):
         self.client = client
 
     def create(self, params=None, data=None):
