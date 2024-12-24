@@ -2,9 +2,10 @@ from urllib import request, parse
 from urllib.parse import urljoin
 import json
 
+from monobank._core import serializers
 
 class BaseAPIClient:
-    def __init__(self, base_url, response_serializer=BaseAPIClient.get_json):
+    def __init__(self, base_url, response_serializer=serializers.get_json):
         """
         Base API client
 
@@ -54,13 +55,3 @@ class BaseAPIClient:
 
     def delete(self, path, params=None, data=None):
         return self._request('DELETE', path, params=params, data=data)
-
-    @staticmethod
-    def get_json(response):
-        """
-        Get json from response
-
-        :param response: urllib.response
-        :return: JSON to PON (Python Object Notation)
-        """
-        return json.loads(response.read().decode('utf-8'))
