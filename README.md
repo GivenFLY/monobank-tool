@@ -19,10 +19,9 @@ api_key = "YOUR_MONOBANK_API_KEY"
 acquiring_api = AcquiringAPI(api_key=api_key)
 ```
 
-### Personal API (WiP)
+### Personal API
 Відповідає за роботу з особистими даними користувача: https://api.monobank.ua/docs/index.html
 
-**УВАГА!** Цей функціонал ще не реалізований
 
 ```python
 from monobank.api import PersonalAPI
@@ -30,19 +29,20 @@ from monobank.api import PersonalAPI
 # Ініціалізуйте API з вашим API-ключем
 api_key = "YOUR_MONOBANK_API_KEY"
 personal_api = PersonalAPI(api_key=api_key)
+info = personal_api.client.info()
 ```
 
-### Corporate API (WiP)
+### Corporate API
 Відповідає за роботу для провайдерів: https://api.monobank.ua/docs/corporate.html
 
-**УВАГА!** Цей функціонал ще не реалізований
 
 ```python
 from monobank.api import CorporateAPI
 
-# Ініціалізуйте API з вашим API-ключем
-api_key = "YOUR_MONOBANK_API_KEY"
-corporate_api = CorporateAPI(api_key=api_key)
+# Ініціалізуйте API з вашим ключем сервісу
+key_id = "YOUR_SERVICE_KEY"
+corporate_api = CorporateAPI(key_id=key_id)
+settings = corporate_api.corp.settings()
 ```
 
 

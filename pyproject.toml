@@ -1,3 +1,12 @@
+[project]
+name = "monobank-tool"
+version = "0.1.5"
+description = "Pure Python API wrapper for Monobank"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [{name = "Oleksii Moshura"}]
+
 [tool.poetry]
 name = "monobank-tool"
 description = "Pure Python API wrapper for Monobank"
